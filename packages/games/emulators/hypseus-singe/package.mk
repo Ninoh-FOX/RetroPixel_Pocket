@@ -5,8 +5,13 @@
 PKG_NAME="hypseus-singe"
 PKG_VERSION="1a6fcd2b4fd771e4d1f1677fb5d636eb7cbe8946"
 PKG_LICENSE="GPL3"
-PKG_SITE="https://github.com/DirtBagXon/hypseus-singe"
-PKG_URL="${PKG_SITE}.git"
+
+#PKG_SITE="https://github.com/DirtBagXon/hypseus-singe"
+#PKG_URL="${PKG_SITE}.git"
+
+PKG_SITE="file://${OLDPWD}/extpackage/hypseus-singe-1a6fcd2b4fd771e4d1f1677fb5d636eb7cbe8946"
+PKG_URL="${PKG_SITE}"
+
 PKG_DEPENDS_TARGET="toolchain SDL2 libvorbis"
 PKG_LONGDESC="Hypseus is a fork of Daphne. A program that lets one play the original versions of many laserdisc arcade games on one's PC."
 PKG_TOOLCHAIN="cmake-make"

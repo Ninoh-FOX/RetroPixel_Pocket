@@ -33,6 +33,17 @@ make distclean
 
 make RPPOCKET
 
+If compiling a node fails, 
+try cleaning that node and then rebuilding it separately. 
+Once you see a success message, 
+continue executing `make RPPOCKET`.
+
+For example
+if the error message "tic-80 compilation failed"
+first execute:  DISTRO=RetroPixel DEVICE=RPPOCKET ARCH=aarch64 ./scripts/clean tic-80
+Then execute:   DISTRO=RetroPixel DEVICE=RPPOCKET ARCH=aarch64 ./scripts/build tic-80
+Finally, execute make RPPOCKET
+
 The make RPPOCKET process will build and generate a image. Follow the installation steps to write your image to a microSD. It will build for the RPPOCKET.
 
 This repository is a modified version of [https://github.com/AmberELEC/AmberELEC], with the main changes being: 1. Adaptation to RETROPIXEL Pocket devices. December 2025
