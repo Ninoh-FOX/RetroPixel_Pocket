@@ -19,11 +19,16 @@ PKG_CONFIGURE_OPTS_TARGET="LIBPNG_CFLAGS=-I${SYSROOT_PREFIX}/usr/include \
                            --with-zlib"
 
 pre_configure_target() {
+  # FreeType 2.13.2 necesita CC_BUILD para compilación nativa
+  export CC_BUILD=gcc
+  export CXX_BUILD=g++
+  export LD_BUILD=ld
+  
   # unset LIBTOOL because freetype uses its own
-    ( cd ..
-      unset LIBTOOL
-      sh autogen.sh
-    )
+  ( cd ..
+    unset LIBTOOL
+    sh autogen.sh
+  )
 }
 
 post_makeinstall_target() {
